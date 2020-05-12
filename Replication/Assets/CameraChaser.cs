@@ -24,10 +24,4 @@ public class CameraChaser : MonoBehaviour
             targetPrevPos = target.transform.position;
         }
     }
-    public void UpdateTarget(GameObject virus)
-    {
-        virus.GetComponent<CellCollision>().pMovement.enabled = true;
-        target = virus;
-        targetPrevPos = target.transform.position;
-    }
 }
