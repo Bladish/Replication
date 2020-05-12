@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 532173078659419485}
   - component: {fileID: 532173078659419482}
   - component: {fileID: -6521203003891474638}
+  - component: {fileID: 1068510964084734673}
   m_Layer: 0
-  m_Name: Virus
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,15 +71,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532173078659419481}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1da7435bd48015747b875ae3a33acc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 20
-  maxVelocity: 10
-  rotationSpeed: 10
+  acceleration: 10
+  maxVelocity: 5
+  rotationSpeed: 5
   force: 0
+--- !u!114 &1068510964084734673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532173078659419481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9358069476ebe5143a79e66ffb617bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _virus: {fileID: 0}
+  _redBloodCell: {fileID: 0}
+  _whiteBloodCell: {fileID: 0}
+  _cellType: 0
 --- !u!1001 &532173077558453895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 2219090509757690039, guid: 9ec5019de07a7d446b4811db272f70f3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2219090509757690039, guid: 9ec5019de07a7d446b4811db272f70f3,
         type: 3}
@@ -99,7 +116,7 @@ PrefabInstance:
     - target: {fileID: 2219090509757690039, guid: 9ec5019de07a7d446b4811db272f70f3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2219090509757690039, guid: 9ec5019de07a7d446b4811db272f70f3,
         type: 3}
