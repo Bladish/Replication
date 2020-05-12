@@ -56,7 +56,11 @@ public class Character : MonoBehaviour
                     case CellType.WhiteBloodCell:
                         break;
                     case CellType.RedBloodCell:
-                        if (cellType == CellType.Virus) SetCellType(cellType);
+                        if (cellType == CellType.Virus)
+                        {
+                            SetCellType(cellType);
+                            GetComponentInParent<GameMaster>().CheckCells();
+                        }
                         break;
                     default:
                         break;
@@ -65,7 +69,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void DeActivateYourSelf()
+    public virtual void DeActivateYourSelf()
     {
         gameObject.SetActive(false);
     }
