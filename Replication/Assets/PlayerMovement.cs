@@ -32,6 +32,6 @@ public class PlayerMovement : MonoBehaviour
         {
             pRigidbody.velocity = pRigidbody.velocity.normalized * maxVelocity;
         }
-        transform.Rotate(new Vector3(Input.GetAxisRaw("Mouse Y") * -1, Input.GetAxisRaw("Mouse X"), 0) * rotationSpeed);
+        transform.Rotate(new Vector3(Input.GetAxisRaw("Mouse Y") * -rotationSpeed, Input.GetAxisRaw("Mouse X"), 0) * rotationSpeed);
     }
 }
